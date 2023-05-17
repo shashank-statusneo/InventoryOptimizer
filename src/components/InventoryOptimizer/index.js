@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Typography, Tabs, Tab, Container } from '@mui/material'
 import { TabContext, TabPanel } from '@mui/lab'
 import OptimizerContainer from './optimizer'
+import OptimizerResultContainer from './OptimizerResult'
 
 const InventoryOptimizer = () => {
     const [currentTab, setCurrentTab] = useState('optimizer')
@@ -18,6 +19,8 @@ const InventoryOptimizer = () => {
         switch (currentTab) {
             case 'optimizer':
                 return <OptimizerContainer />
+            case 'optimizerResult':
+                return <OptimizerResultContainer />
             default:
                 return <></>
         }
